@@ -8,17 +8,17 @@ void setup() {
   balls = new BALL[100];
   boxs = new Box[100];
   for (int i=0; i<balls.length; i++) { 
-    
+
     balls[i] = new BALL(random(0.0, 1920.0), random(0.0, 1080.0), int(random(0, 100)));
-    boxs[i] = new Box(random(0.0, 1920.0), random(0.0, 1080.0),int(random(0, 100)));
+    boxs[i] = new Box(random(0.0, 1920.0), random(0.0, 1080.0), int(random(0, 100)));
   }
 }
 void draw() {
   for (BALL ball : balls) {
-     ball.draw();
-  for (Box box : boxs) {
-     box.draw();
-  }
+    ball.draw();
+    for (Box box : boxs) {
+      box.draw();
+    }
   }
 }
 
